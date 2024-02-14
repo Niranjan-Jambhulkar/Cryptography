@@ -8,11 +8,21 @@ class Alphabet{
 
 class SwapAlphabet extends Alphabet{
     int num;
+    String message;
+
+    String[] message1 = new String[100];
     static String[] swap = new String[26];
     public void setNum(int num){
         this.num = num;
     }
-    public void Swap() {
+    public void setMessage(String message){
+        this.message = message;
+    }
+
+    public void stringSplit(){
+        message1 = message.split("0");
+    }
+    public void swap() {
         for (int i = num, a = 0; i < 26; i++, a++) {
             swap[a] = super.alphabet[i];
         }
@@ -20,9 +30,9 @@ class SwapAlphabet extends Alphabet{
             swap[i] = super.alphabet[a];
         }
     }
-    public void show(){
-        for (int i= 0; i<26; i++) {
-            System.out.println(swap[i]);
+    public void encrypt(){
+        for (String x : message1){
+            System.out.println(x);
         }
     }
 }
@@ -31,8 +41,12 @@ public class Cryptography {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         SwapAlphabet sa = new SwapAlphabet();
-        sa.setNum(5);
-        sa.Swap();
-        sa.show();
+        System.out.print("Enter Key: ");
+        sa.setNum(sc.nextInt());
+        sa.swap();
+        System.out.print("Enter Message: ");
+        sa.setMessage(sc.next());
+        sa.stringSplit();
+        sa.encrypt();
     }
 }
