@@ -5,8 +5,7 @@ class Alphabet{
 public class Encrypt extends Alphabet{
     int num;
     String message;
-
-    String[] message1 = new String[100];
+    String[] split = new String[100];
     static String[] swap = new String[26];
     public void setNum(int num){
 
@@ -17,7 +16,12 @@ public class Encrypt extends Alphabet{
         this.message = message;
     }
     public void stringSplit(){
-        message1 = message.split("0");
+        for (int i = 0; i<message.length();i++){
+            split[i] = String.valueOf(message.charAt(i));
+        }
+        for (int i = 0; i<message.length(); i++){
+            System.out.println(split[i]);
+        }
     }
     public void swap() {
         for (int i = num, a = 0; i < 26; i++, a++) {
@@ -28,9 +32,7 @@ public class Encrypt extends Alphabet{
         }
     }
     public void encrypt(){
-        for (String x : message1){
-            System.out.println(x);
-        }
+        
     }
 }
 
