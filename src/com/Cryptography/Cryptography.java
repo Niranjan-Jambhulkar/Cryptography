@@ -14,6 +14,7 @@ public class Cryptography {
         System.out.print("Enter Message: ");
         sa.setMessage(message.nextLine());
         sa.stringSplit();
+        sa.setAlphabet();
         sa.encrypt();
     }
 }
