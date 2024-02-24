@@ -1,53 +1,26 @@
 package com.Encrypt;
 import com.Alphabet.Alphabet;
-import java.util.LinkedList;
 public class Encrypt extends Alphabet{
-    int num;
+    int key;
     String message;
-    String[] split = new String[100];
-    static String[] swap = new String[26];
-    LinkedList alphabet = null;
-    StringBuilder swaped = new StringBuilder();
     StringBuilder encryptMessage = new StringBuilder();
-    LinkedList stringSplit = null;
+    StringBuilder swaped = new StringBuilder();
 
     public void swap() {
-        for (int i = num, a = 0; i < 26; i++, a++) {
-            swap[a] = super.alphabetArray[i];
-        }
-        for (int i = (26-num), a = 0; i < 26; i++, a++) {
-            swap[i] = super.alphabetArray[a];
-        }
+        swaped.append(alphabet.substring(key,26));
+        swaped.append(alphabet.substring(0,key));
     }
 
-    public void setAlphabet(){
-        alphabet = new LinkedList();
-        for (int i =0 ; i <alphabetArray.length;i++){
-            alphabet.add(alphabetArray[i]);
-        }
-        alphabet.add(26," ");
-
-        for (int i =0 ; i <alphabetArray.length;i++){
-            swaped.append(swap[i]);
-        }
+    public void setSpace(){
+        alphabet.append(" ");
         swaped.append(" ");
     }
-    public void setNum(int num){
-        this.num = num;
+    public void setNum(int key){
+        this.key = key;
     }
     public void setMessage(String m){
         this.message = m;
         message = message.toUpperCase();
-    }
-    public void stringSplit(){
-        for (int i = 0; i<message.length();i++){
-            split[i] = String.valueOf(message.charAt(i));
-        }
-        stringSplit = new LinkedList();
-        for (int i =0 ; i <message.length();i++){
-            stringSplit.add(split[i]);
-        }
-
     }
     public void encrypt(){
         for (int i = 0; i<message.length(); i++){
