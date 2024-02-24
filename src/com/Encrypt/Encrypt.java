@@ -1,10 +1,6 @@
 package com.Encrypt;
-
+import com.Alphabet.Alphabet;
 import java.util.LinkedList;
-
-class Alphabet{
-    static String[] alphabetArray = {"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"};
-}
 public class Encrypt extends Alphabet{
     int num;
     String message;
@@ -55,9 +51,6 @@ public class Encrypt extends Alphabet{
     }
     public void encrypt(){
         for (int i = 0; i<message.length(); i++){
-//            if (){
-//
-//            }
             char a = message.charAt(i);
             String b = Character.toString(a);
             int index = alphabet.indexOf(b);
