@@ -10,7 +10,8 @@ public class Cryptography {
         Scanner message = new Scanner(System.in);
         Encrypt sa = new Encrypt();
         Decrypt dc = new Decrypt();
-        System.out.println("Enter num: ");
+        System.out.println("1. Encrypt Message\n2. Decrypt Message");
+        System.out.print("Select: ");
         int a = sc.nextInt();
         switch (a){
             case 1:
