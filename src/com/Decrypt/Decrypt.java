@@ -32,6 +32,6 @@ public class Decrypt extends Alphabet {
             char c = alphabet.charAt(index);
             decryptMessage.append(c);
         }
-        System.out.println("Encrypted Message: "+ decryptMessage);
+        System.out.println("Decrypted Message: "+ decryptMessage);
     }
 }

@@ -5,14 +5,17 @@ import com.Decrypt.Decrypt;
 
 
 public class Cryptography {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
         Scanner message = new Scanner(System.in);
         int i;
         Encrypt sa = new Encrypt();
         Decrypt dc = new Decrypt();
+        Intro in = new Intro();
+        in.start();
+        in.join();
         for(i = 0; i<1;) {
-        	System.out.println("1. Encrypt Message\n2. Decrypt Message\n3. Exit");
+        	System.out.println("\n1. Encrypt Message\n2. Decrypt Message\n3. Exit");
             System.out.print("Select: ");
             int a = sc.nextInt();
             switch (a){
