@@ -27,6 +27,7 @@ public class Cryptography {
                     sa.setMessage(message.nextLine());
                     sa.setSpace();
                     sa.encrypt();
+                    sa.clear();
                     break;
 
                 case 2:
@@ -37,11 +38,13 @@ public class Cryptography {
                     dc.setMessage(message.nextLine());
                     dc.setSpace();
                     dc.decrypt();
+                    dc.clear();
                     break;
                     
                 case 3:
                 	i = 1;
                 	System.out.println("Thank You!");
+                	break;
             }
         }
     }

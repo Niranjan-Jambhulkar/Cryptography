@@ -15,13 +15,16 @@ public class Encrypt extends Alphabet{
         alphabet.append(" ");
         swaped.append(" ");
     }
+    
     public void setNum(int key){
         this.key = key;
     }
+    
     public void setMessage(String m){
         this.message = m;
         message = message.toUpperCase();
     }
+    
     public void encrypt(){
         for (int i = 0; i<message.length(); i++){
             char a = message.charAt(i);
@@ -32,5 +35,13 @@ public class Encrypt extends Alphabet{
         }
         System.out.println("Encrypted Message: "+ encryptMessage);
     }
+    
+    public void clear() {
+    	int l = encryptMessage.length();
+        encryptMessage.delete(0, l);
+        swaped.delete(0, 27);
+        alphabet.deleteCharAt(26);
+    }
+
 }
 
