@@ -34,4 +34,11 @@ public class Decrypt extends Alphabet {
         }
         System.out.println("Decrypted Message: "+ decryptMessage);
     }
+    
+    public void clear() {
+    	int l = decryptMessage.length();
+    	decryptMessage.delete(0, l);
+        swaped.delete(0, 27);
+        alphabet.deleteCharAt(26);
+    }
 }
