@@ -9,7 +9,7 @@ public class Decrypt extends Alphabet {
     StringBuilder swaped = new StringBuilder();
 
     public void swap() {
-        swaped.append(alphabet.substring(key,26));
+        swaped.append(alphabet.substring(key,36));
         swaped.append(alphabet.substring(0,key));
     }
 

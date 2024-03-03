@@ -4,7 +4,7 @@ public class Intro extends Thread{
 	//Thread t = Thread.currentThread();
 	public void run() {
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(500);
 			for(int i = 0; i<35;i++) {
 				System.out.print("-");
 			}
@@ -12,7 +12,7 @@ public class Intro extends Thread{
 			for(int i = 0; i<35;i++) {
 				System.out.print("-");
 			}
-			Thread.sleep(1500);
+			Thread.sleep(500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
