@@ -38,7 +38,7 @@ public class Decrypt extends Alphabet {
     public void clear() {
     	int l = decryptMessage.length();
     	decryptMessage.delete(0, l);
-        swaped.delete(0, 27);
-        alphabet.deleteCharAt(26);
+        swaped.delete(0, 37);
+        alphabet.deleteCharAt(36);
     }
 }
