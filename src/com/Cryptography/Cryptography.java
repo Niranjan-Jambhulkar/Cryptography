@@ -20,6 +20,7 @@ public class Cryptography {
             int a = sc.nextInt();
             switch (a){
                 case 1:
+                    System.out.println("Key should be smaller than 36");
                     System.out.print("Set Key: ");
                     sa.setNum(sc.nextInt());
                     sa.swap();
